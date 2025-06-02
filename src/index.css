@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@theme {
+  --color-purple1: #3a6eff;
+  --color-purple2: #2b52c2;
+  --color-purple3: #3a6eff63;
+  --color-white: #f5f5f5;
+
+  --color-background1: #08090a;
+  --color-background2: #0e0f10;
+  --color-background3: #0a0b0c;
+}
+
+body,
+#root {
+  @apply w-full min-h-screen flex items-center justify-center flex-col bg-background1 text-white;
+}
+
+#root {
+  @apply py-5;
+}
+
+select {
+  @apply ml-2.5 text-center outline-none border-none;
+}
+
+option {
+  @apply text-black;
+}
+
+dialog::backdrop {
+  @apply bg-black backdrop-blur-xs;
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    z-index: -2;
+  }
+  100% {
+    z-index: 3;
+  }
+}
