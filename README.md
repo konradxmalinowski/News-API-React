@@ -1,54 +1,128 @@
-# React + TypeScript + Vite
+# News API React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive web application for browsing the latest news, built with **React**, **TypeScript**, **TailwindCSS**, and powered by **Vite** for lightning-fast development and build times.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Fast & Modern Stack:** Built with React, TypeScript, Vite, and styled using TailwindCSS.
+- 📰 **Latest News:** Fetches and displays current news articles from a news API.
+- 🔍 **Search & Filter:** Easily search and filter news articles by keywords or categories.
+- 📱 **Responsive Design:** Fully responsive layout that looks great on all devices.
+- 🌙 **Dark Mode:** Seamlessly switch between light and dark themes.
+- 💾 **Easy Setup:** Quick start with minimal configuration.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/) or [npm](https://www.npmjs.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/konradxmalinowski/News-API-React.git
+   cd News-API-React
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+3. **Configure API Key:**
+
+   Create a file named `API.ts` inside the `src` directory with the following content:
+
+   ```ts
+   export const API_KEY: string = 'API_KEY';
+   ```
+
+   Replace `"API_KEY"` with your actual News API key.
+
+   > You can obtain a free API key from [NewsAPI.org](https://newsapi.org/) or another news provider.
+
+4. **Run the development server:**
+
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
+
+5. Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Building for Production
+
+```bash
+yarn build
+# or
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The production-ready files will be in the `dist` directory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── api/
+│   ├── styles/
+│   ├── API.ts        # <-- Place your API key here
+│   ├── App.tsx
+│   └── main.tsx
+├── tailwind.config.js
+├── vite.config.ts
+└── README.md
+```
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [News API](https://newsapi.org/) (or similar)
+
+## Customization
+
+- **Change News Source:** Edit the API URL or key in `src/API.ts`.
+- **Styling:** Modify Tailwind classes or add custom CSS for your needs.
+- **Features:** Extend the app with user authentication, bookmarks, or offline mode.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for new features, bugs, or suggestions.
+
+## License
+
+```
+MIT License
+
+Copyright (c) 2025 Konrad Malinowski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
