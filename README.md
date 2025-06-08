@@ -4,12 +4,12 @@ A modern and responsive web application for browsing the latest news, built with
 
 ## Features
 
-- ⚡ **Fast & Modern Stack:** Built with React, TypeScript, Vite, and styled using TailwindCSS.
-- 📰 **Latest News:** Fetches and displays current news articles from a news API.
-- 🔍 **Search & Filter:** Easily search and filter news articles by keywords or categories.
-- 📱 **Responsive Design:** Fully responsive layout that looks great on all devices.
-- 🌙 **Dark Mode:** Seamlessly switch between light and dark themes.
-- 💾 **Easy Setup:** Quick start with minimal configuration.
+- **Fast & Modern Stack:** Built with React, TypeScript, Vite, and styled using TailwindCSS.
+- **Latest News:** Fetches and displays current news articles from a news API.
+- **Search & Filter:** Easily search and filter news articles by keywords or categories.
+- **Responsive Design:** Fully responsive layout that looks great on all devices.
+- **Dark Mode:** Seamlessly switch between light and dark themes.
+- **Easy Setup:** Quick start with minimal configuration.
 
 ## Getting Started
 
@@ -97,9 +97,12 @@ The production-ready files will be in the `dist` directory.
 - **Styling:** Modify Tailwind classes or add custom CSS for your needs.
 - **Features:** Extend the app with user authentication, bookmarks, or offline mode.
 
-## Contributing
+- ## Contact
 
-Contributions are welcome! Please open an issue or submit a pull request for new features, bugs, or suggestions.
+If you have any questions, feel free to contact me:
+
+- Email: [malinowski.konrad45@gmail.com](malinowski.konrad45@gmail.com)
+
 
 ## License
 
