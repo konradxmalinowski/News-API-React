@@ -2,6 +2,8 @@
 
 A modern and responsive web application for browsing the latest news, built with **React**, **TypeScript**, **TailwindCSS**, and powered by **Vite** for lightning-fast development and build times.
 
+<br>
+
 ## Features
 
 - **Fast & Modern Stack:** Built with React, TypeScript, Vite, and styled using TailwindCSS.
@@ -10,6 +12,8 @@ A modern and responsive web application for browsing the latest news, built with
 - **Responsive Design:** Fully responsive layout that looks great on all devices.
 - **Dark Mode:** Seamlessly switch between light and dark themes.
 - **Easy Setup:** Quick start with minimal configuration.
+
+<br>
 
 ## Getting Started
 
@@ -67,6 +71,8 @@ npm run build
 
 The production-ready files will be in the `dist` directory.
 
+<br>
+
 ## Project Structure
 
 ```
@@ -83,6 +89,8 @@ The production-ready files will be in the `dist` directory.
 └── README.md
 ```
 
+<br>
+
 ## Technologies Used
 
 - [React](https://react.dev/)
@@ -91,14 +99,25 @@ The production-ready files will be in the `dist` directory.
 - [TailwindCSS](https://tailwindcss.com/)
 - [News API](https://newsapi.org/) (or similar)
 
+<br>
+
 ## Customization
 
 - **Change News Source:** Edit the API URL or key in `src/API.ts`.
 - **Styling:** Modify Tailwind classes or add custom CSS for your needs.
 - **Features:** Extend the app with user authentication, bookmarks, or offline mode.
 
-- ## Contact
+<br>
 
-If you have any questions, feel free to contact me:
+## Screenshots
+![image](https://github.com/user-attachments/assets/8eb053d2-1d21-4b10-9798-fa7ad6dec6ec)
 
-- Email: [malinowski.konrad45@gmail.com](malinowski.konrad45@gmail.com)
+
+<br>
+
+
+## Contact
+
+If you have any questions, feel free to contact me: [malinowski.konrad45@gmail.com](malinowski.konrad45@gmail.com)
+
+
