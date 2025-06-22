@@ -1,9 +1,5 @@
 # News API React
 
-A modern and responsive web application for browsing the latest news, built with **React**, **TypeScript**, **TailwindCSS**, and powered by **Vite** for lightning-fast development and build times.
-
-<br>
-
 ## Features
 
 - **Fast & Modern Stack:** Built with React, TypeScript, Vite, and styled using TailwindCSS.
