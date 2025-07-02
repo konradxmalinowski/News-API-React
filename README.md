@@ -106,7 +106,8 @@ The production-ready files will be in the `dist` directory.
 <br>
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/8eb053d2-1d21-4b10-9798-fa7ad6dec6ec)
+![image](https://github.com/user-attachments/assets/4fc3f953-753e-4a0b-91ff-b7fcd457b1fa)
+
 
 
 <br>
