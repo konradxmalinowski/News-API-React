@@ -7,9 +7,10 @@
 }
 
 @theme {
-  --color-purple1: #3a6eff;
-  --color-purple2: #2b52c2;
-  --color-purple3: #3a6eff63;
+  --color-purple1: #4c566a;
+  --color-purple2: #434c5e;
+  --color-purple3: #4c566a63;
+
   --color-white: #f5f5f5;
 
   --color-background1: #08090a;
@@ -23,7 +24,7 @@ body,
 }
 
 #root {
-  @apply py-5;
+  @apply py-8;
 }
 
 select {

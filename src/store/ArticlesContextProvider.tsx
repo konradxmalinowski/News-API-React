@@ -38,6 +38,7 @@ export const ArticlesContextProvider = ({
   const [response, setResponse] = useState<UseStateType>({
     ...UseStatePrototype,
   });
+  const [currentTopic, setCurrentTopic] = useState<string>('Technology');
 
   const fetchArticles = async (
     language: string = 'en',
@@ -46,7 +47,6 @@ export const ArticlesContextProvider = ({
     content: string = 'bitcoin'
   ) => {
     const validateUserData = (): validatedUserDataType => {
-      console.log(language, sortBy, pageSize, content);
       return {
         language: encodeURIComponent(language),
         sortBy: encodeURIComponent(sortBy),
@@ -70,7 +70,7 @@ export const ArticlesContextProvider = ({
       const data = await response.json();
       setResponse(data);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -81,6 +81,8 @@ export const ArticlesContextProvider = ({
   return (
     <ArticlesContext
       value={{
+        currentTopic,
+        setCurrentTopic,
         articles: response.articles,
         totalResults: response.totalResults,
         handleFetchArticles: fetchArticles,

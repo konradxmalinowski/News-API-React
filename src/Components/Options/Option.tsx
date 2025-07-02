@@ -1,22 +1,21 @@
 const Option = ({
   label,
-  quantity,
+  isSelected,
   onClick,
 }: {
   label: string;
-  quantity: number;
+  isSelected: boolean;
   onClick: () => void;
 }) => {
   return (
-    <div
+    <a
       onClick={onClick}
-      className="border-[1px] border-white border-solid rounded-[3px] text-white py-1 px-3 w-fit my-3 flex justify-center items-center relative rounded-r-none pr-8 transition-all hover:border-purple2 hover:transition-all cursor-pointer"
+      className={`h-7 text-gray-400 cursor-pointer transition-colors hover:text-gray-50 hover:border-b-1 hover:transition-all ${
+        isSelected ? 'border-b-1' : ''
+      }`}
     >
-      {label}
-      <div className="w-5 h-full bg-white text-background3 font-bold text-center absolute right-0 px-0.5 flex justify-center items-center">
-        {quantity}
-      </div>
-    </div>
+      {label.charAt(0).toUpperCase() + label.slice(1)}
+    </a>
   );
 };
 

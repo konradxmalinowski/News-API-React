@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import { ArticlesContext } from '../store/ArticlesContext';
-import Wrapper from './Wrapper';
 import Button from './Button';
 import FormWrapper from './FormWrapper';
 import Options from './Options/Options';
@@ -24,37 +23,18 @@ type LanguageType =
 type SortByType = 'relevancy' | 'popularity' | 'publishedAt';
 
 const SearchPanel = () => {
-  const { handleFetchArticles } = useContext(ArticlesContext);
-  const [content, setContent] = useState<string>('technology');
+  const { handleFetchArticles, currentTopic } = useContext(ArticlesContext);
   const [pageSize, setPageSize] = useState<string>('10');
   const [language, setLanguage] = useState<LanguageType>('en');
   const [sortBy, setSortBy] = useState<SortByType>('publishedAt');
 
   return (
-    <Wrapper className="mb-20">
+    <>
       <Options />
 
-      <div className="w-full flex flex-wrap gap-5 items-center justify-center content-center">
+      <div className="w-full flex flex-wrap gap-5 items-center justify-start content-center">
         <FormWrapper>
-          <label className="font-semibold" htmlFor="topic">
-            Topic:
-          </label>
-          <select
-            value={content}
-            id="topic"
-            onChange={(e) => setContent(e.target.value)}
-          >
-            <option value="technology">Technology</option>
-            <option value="bitcoin">Bitcoin</option>
-            <option value="science">Science</option>
-            <option value="economy">Economy</option>
-            <option value="sports">Sports</option>
-          </select>
-        </FormWrapper>
-        <FormWrapper>
-          <label className="font-semibold" htmlFor="page-size">
-            Page size:
-          </label>
+          <label htmlFor="page-size">Page size:</label>
           <select
             value={pageSize}
             id="page-size"
@@ -66,9 +46,7 @@ const SearchPanel = () => {
           </select>
         </FormWrapper>
         <FormWrapper>
-          <label className="font-semibold" htmlFor="lang">
-            Language:
-          </label>
+          <label htmlFor="lang">Language:</label>
           <select
             value={language}
             id="lang"
@@ -83,9 +61,7 @@ const SearchPanel = () => {
           </select>
         </FormWrapper>
         <FormWrapper>
-          <label className="font-semibold" htmlFor="sort-by">
-            Sort by:
-          </label>
+          <label htmlFor="sort-by">Sort by:</label>
           <select
             value={sortBy}
             id="sort-by"
@@ -101,10 +77,10 @@ const SearchPanel = () => {
       <Button
         label="Search articles"
         handleClick={() =>
-          handleFetchArticles(language, sortBy, pageSize, content)
+          handleFetchArticles(language, sortBy, pageSize, currentTopic)
         }
       />
-    </Wrapper>
+    </>
   );
 };
 

@@ -1,7 +1,9 @@
-import { createContext } from 'react';
+import { createContext, type Dispatch, type SetStateAction } from 'react';
 import type { ArticlesType } from './ArticlesContextProvider';
 
 interface Ctx {
+  currentTopic: string;
+  setCurrentTopic: Dispatch<SetStateAction<string>>;
   articles: ArticlesType[];
   totalResults: number;
   handleFetchArticles: (
@@ -13,6 +15,8 @@ interface Ctx {
 }
 
 export const ctxPrototype: Ctx = {
+  currentTopic: 'Technology',
+  setCurrentTopic: () => {},
   articles: [],
   totalResults: 0,
   handleFetchArticles: () => {},

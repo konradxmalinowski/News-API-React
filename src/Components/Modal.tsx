@@ -32,11 +32,15 @@ const Modal = forwardRef<ModalRef, ModalProps>(({ children }, ref) => {
     <dialog
       onClose={handleClose}
       ref={dialogRef}
-      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] max-w-300 min-h-56 bg-background2 text-white flex flex-col items-start justify-center gap-5 p-6 -z-10 border-none rounded-xl shadow-[0_0_10px_5px_#00000080] outline-none animate-slide-in-from-top"
+      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] max-w-300 min-h-56 bg-background2 text-white flex flex-col items-start justify-center gap-3 p-6 -z-10 border-none rounded-xl shadow-[0_0_10px_5px_#00000080] outline-none animate-slide-in-from-top"
     >
       {children}
       <form method="dialog">
-        <Button label="Close" handleClick={handleClose} />
+        <Button
+          label="X"
+          handleClick={handleClose}
+          className="absolute top-5 right-5"
+        />
       </form>
     </dialog>,
     document.body

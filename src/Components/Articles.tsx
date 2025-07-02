@@ -17,8 +17,7 @@ const Articles = () => {
 
   return (
     <>
-      <Wrapper className="">
-        <p className="font-bold text-3xl">Found results: {totalResults}</p>
+      <div className="w-full flex flex-col items-start justify-center gap-y-7">
         {articles && totalResults && (
           <>
             {articles.map((item, idx) => (
@@ -27,7 +26,6 @@ const Articles = () => {
                 key={idx}
                 author={item.author}
                 title={item.title}
-                description={item.description}
                 url={item.url}
                 urlToImage={item.urlToImage}
                 publishedAt={item.publishedAt}
@@ -38,7 +36,7 @@ const Articles = () => {
             ))}
           </>
         )}
-      </Wrapper>
+      </div>
       <Modal ref={modalRef}>{modalContent}</Modal>
     </>
   );
